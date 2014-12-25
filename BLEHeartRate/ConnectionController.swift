@@ -26,6 +26,7 @@ class ConnectionController: NSObject, CBCentralManagerDelegate, CBPeripheralDele
     var healthStore: HKHealthStore?
     
     var currentBpm: Int?
+    var saveContinuously: Bool = false
     
     var delegate: ConnectionControllerDelegate?
     
@@ -108,7 +109,6 @@ class ConnectionController: NSObject, CBCentralManagerDelegate, CBPeripheralDele
             
             if(characteristic.UUID == CBUUID(string: MEASUREMENT_CHARACTERISTIC)){
                 self.peripheral?.setNotifyValue(true, forCharacteristic: characteristic)
-                println("subscribedToMeasurement")
             }
         }
     }
@@ -132,6 +132,17 @@ class ConnectionController: NSObject, CBCentralManagerDelegate, CBPeripheralDele
         
         self.delegate?.updateMeasurement(bpm)
         self.currentBpm = bpm
+        if(self.saveContinuously){
+            self.addCurrentValueToHealthApp()
+        }
+    }
+    
+    func setSaveContinuously(saveContinuously: Bool){
+        self.saveContinuously = saveContinuously
+    }
+    
+    func stopScanning(){
+        self.centralManager?.stopScan()
     }
     
     func addCurrentValueToHealthApp(){
@@ -149,6 +160,5 @@ class ConnectionController: NSObject, CBCentralManagerDelegate, CBPeripheralDele
                 println("HealthKit save failed, error: \(error)")
             }
         })
-
     }
 }

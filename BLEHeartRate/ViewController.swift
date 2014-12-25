@@ -13,6 +13,7 @@ class ViewController: UIViewController, ConnectionControllerDelegate {
     @IBOutlet weak var deviceLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var continuouslySwitch: UISwitch!
     @IBOutlet weak var addToHealthAppButton: UIButton!
 
     var con: ConnectionController?
@@ -32,10 +33,16 @@ class ViewController: UIViewController, ConnectionControllerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        println("Memory warning!")
     }
     
     @IBAction func add(sender: UIButton) {
         con?.addCurrentValueToHealthApp()
+    }
+    
+    @IBAction func sendContinuouslySwitchChanged(sender: UISwitch) {
+        self.con?.setSaveContinuously(sender.on)
+        self.addToHealthAppButton.enabled = !sender.enabled
     }
     
     func updateDevice(device: String!) {
@@ -48,7 +55,7 @@ class ViewController: UIViewController, ConnectionControllerDelegate {
     
     func updateMeasurement(bpm: Int!) {
         self.valueLabel.text = "Heart rate: \(bpm)"
-        if(!self.addToHealthAppButton.enabled){
+        if !self.continuouslySwitch.on{
             self.addToHealthAppButton.enabled = true
         }
     }

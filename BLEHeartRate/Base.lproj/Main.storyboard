@@ -90,34 +90,69 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rS4-2i-Lyp">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <connections>
+                                    <action selector="sendContinuouslySwitchChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="O50-a1-988"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continuously" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geE-eQ-bMm">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rEN-C0-H1U" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="3RB-uR-Qmu"/>
-                            <constraint firstAttribute="bottom" secondItem="WUv-S6-2Ed" secondAttribute="bottom" constant="20" symbolic="YES" id="3cS-bs-kGe"/>
+                            <constraint firstAttribute="bottom" secondItem="WUv-S6-2Ed" secondAttribute="bottom" constant="20" symbolic="YES" id="3cS-bs-kGe">
+                                <variation key="widthClass=compact" constant="54"/>
+                            </constraint>
                             <constraint firstItem="rEN-C0-H1U" firstAttribute="top" secondItem="o3W-5p-Fc9" secondAttribute="bottom" constant="-50" id="9y2-pC-w93"/>
+                            <constraint firstItem="geE-eQ-bMm" firstAttribute="top" secondItem="WUv-S6-2Ed" secondAttribute="bottom" constant="8" symbolic="YES" id="Mf2-It-x3b"/>
                             <constraint firstItem="rEN-C0-H1U" firstAttribute="top" secondItem="i8x-hE-R9m" secondAttribute="bottom" constant="32" id="Nbs-2F-1kp"/>
                             <constraint firstItem="WUv-S6-2Ed" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="RdU-cG-q58"/>
+                            <constraint firstItem="geE-eQ-bMm" firstAttribute="leading" secondItem="WUv-S6-2Ed" secondAttribute="leading" id="V9O-q0-N3W"/>
                             <constraint firstItem="UvL-iB-fjM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="cek-dj-hTl"/>
                             <constraint firstItem="o3W-5p-Fc9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="gXK-8I-1d1"/>
+                            <constraint firstItem="rS4-2i-Lyp" firstAttribute="leading" secondItem="geE-eQ-bMm" secondAttribute="trailing" constant="5" id="meH-gn-mY2"/>
                             <constraint firstItem="o3W-5p-Fc9" firstAttribute="width" secondItem="rEN-C0-H1U" secondAttribute="width" id="pBI-X2-Ljc"/>
+                            <constraint firstItem="geE-eQ-bMm" firstAttribute="centerY" secondItem="rS4-2i-Lyp" secondAttribute="centerY" id="r1G-dm-TUX"/>
                             <constraint firstItem="i8x-hE-R9m" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="t7V-jC-Oph"/>
                             <constraint firstItem="i8x-hE-R9m" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="u64-RN-9po"/>
                             <constraint firstItem="UvL-iB-fjM" firstAttribute="top" secondItem="rEN-C0-H1U" secondAttribute="bottom" constant="37" id="x3K-X5-74x"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="rS4-2i-Lyp"/>
+                                <exclude reference="geE-eQ-bMm"/>
+                            </mask>
                             <mask key="constraints">
                                 <exclude reference="Nbs-2F-1kp"/>
+                                <exclude reference="Mf2-It-x3b"/>
+                                <exclude reference="V9O-q0-N3W"/>
+                                <exclude reference="r1G-dm-TUX"/>
+                                <exclude reference="meH-gn-mY2"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="rS4-2i-Lyp"/>
+                                <include reference="geE-eQ-bMm"/>
+                            </mask>
                             <mask key="constraints">
                                 <include reference="Nbs-2F-1kp"/>
+                                <include reference="Mf2-It-x3b"/>
+                                <include reference="V9O-q0-N3W"/>
+                                <include reference="r1G-dm-TUX"/>
+                                <include reference="meH-gn-mY2"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="addToHealthAppButton" destination="WUv-S6-2Ed" id="Ak0-SP-G06"/>
+                        <outlet property="continuouslySwitch" destination="rS4-2i-Lyp" id="63d-fp-ASx"/>
                         <outlet property="deviceLabel" destination="o3W-5p-Fc9" id="fQf-EQ-sbq"/>
                         <outlet property="statusLabel" destination="rEN-C0-H1U" id="wRt-Xr-5is"/>
                         <outlet property="valueLabel" destination="UvL-iB-fjM" id="ksK-oX-mVd"/>
