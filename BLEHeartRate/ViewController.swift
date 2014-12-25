@@ -13,6 +13,7 @@ class ViewController: UIViewController, ConnectionControllerDelegate {
     @IBOutlet weak var deviceLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var addToHealthAppButton: UIButton!
 
     var con: ConnectionController?
     
@@ -33,20 +34,23 @@ class ViewController: UIViewController, ConnectionControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func add(sender: UIButton) {
+        con?.addCurrentValueToHealthApp()
+    }
+    
     func updateDevice(device: String!) {
         self.deviceLabel.text = "Device: \(device)"
     }
     
+    func updateStatus(status: String!) {
+        self.statusLabel.text = "Bluetooth Status: \(status)"
+    }
+    
     func updateMeasurement(bpm: Int!) {
         self.valueLabel.text = "Heart rate: \(bpm)"
-    }
-    
-    func updateStatus(status: String!) {
-        self.statusLabel.text = "Status: \(status)"
-    }
-    
-    @IBAction func add(sender: UIButton) {
-        con?.addCurrentValueToHealthApp()
+        if(!self.addToHealthAppButton.enabled){
+            self.addToHealthAppButton.enabled = true
+        }
     }
 }
 

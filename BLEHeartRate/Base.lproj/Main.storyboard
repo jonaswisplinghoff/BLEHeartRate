@@ -24,28 +24,7 @@
                                     <constraint firstAttribute="width" constant="200" id="k5S-Mn-ALw"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heart rate:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvL-iB-fjM">
-                                <rect key="frame" x="16" y="521" width="257" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3W-5p-Fc9">
-                                <rect key="frame" x="16" y="463" width="257" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEN-C0-H1U">
-                                <rect key="frame" x="16" y="492" width="257" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="257" id="gFI-rS-9c9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUv-S6-2Ed">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUv-S6-2Ed">
                                 <rect key="frame" x="16" y="550" width="127" height="30"/>
                                 <state key="normal" title="Add to Health App">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,24 +33,91 @@
                                     <action selector="add:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="foC-S0-WEv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Heart rate:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvL-iB-fjM">
+                                <rect key="frame" x="16" y="294" width="257" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="nwx-3B-APx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="nwx-3B-APx"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="nwx-3B-APx"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Device:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3W-5p-Fc9">
+                                <rect key="frame" x="16" y="265" width="257" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="257" id="0gC-ud-iWO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0gC-ud-iWO"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="0gC-ud-iWO"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Status:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEN-C0-H1U">
+                                <rect key="frame" x="16" y="236" width="257" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="257" id="Plp-49-jGD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Plp-49-jGD"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Plp-49-jGD"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rEN-C0-H1U" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="3RB-uR-Qmu"/>
                             <constraint firstAttribute="bottom" secondItem="WUv-S6-2Ed" secondAttribute="bottom" constant="20" symbolic="YES" id="3cS-bs-kGe"/>
-                            <constraint firstItem="WUv-S6-2Ed" firstAttribute="top" secondItem="UvL-iB-fjM" secondAttribute="bottom" constant="8" id="8Ab-Mp-2rP"/>
-                            <constraint firstItem="rEN-C0-H1U" firstAttribute="top" secondItem="o3W-5p-Fc9" secondAttribute="bottom" constant="8" id="9y2-pC-w93"/>
+                            <constraint firstItem="rEN-C0-H1U" firstAttribute="top" secondItem="o3W-5p-Fc9" secondAttribute="bottom" constant="-50" id="9y2-pC-w93"/>
+                            <constraint firstItem="rEN-C0-H1U" firstAttribute="top" secondItem="i8x-hE-R9m" secondAttribute="bottom" constant="32" id="Nbs-2F-1kp"/>
                             <constraint firstItem="WUv-S6-2Ed" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="RdU-cG-q58"/>
                             <constraint firstItem="UvL-iB-fjM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="cek-dj-hTl"/>
-                            <constraint firstItem="o3W-5p-Fc9" firstAttribute="width" secondItem="UvL-iB-fjM" secondAttribute="width" id="gVn-Gr-1me"/>
                             <constraint firstItem="o3W-5p-Fc9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="gXK-8I-1d1"/>
                             <constraint firstItem="o3W-5p-Fc9" firstAttribute="width" secondItem="rEN-C0-H1U" secondAttribute="width" id="pBI-X2-Ljc"/>
                             <constraint firstItem="i8x-hE-R9m" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="t7V-jC-Oph"/>
                             <constraint firstItem="i8x-hE-R9m" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="u64-RN-9po"/>
-                            <constraint firstItem="UvL-iB-fjM" firstAttribute="top" secondItem="rEN-C0-H1U" secondAttribute="bottom" constant="8" id="x3K-X5-74x"/>
+                            <constraint firstItem="UvL-iB-fjM" firstAttribute="top" secondItem="rEN-C0-H1U" secondAttribute="bottom" constant="37" id="x3K-X5-74x"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Nbs-2F-1kp"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Nbs-2F-1kp"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="addToHealthAppButton" destination="WUv-S6-2Ed" id="Ak0-SP-G06"/>
                         <outlet property="deviceLabel" destination="o3W-5p-Fc9" id="fQf-EQ-sbq"/>
                         <outlet property="statusLabel" destination="rEN-C0-H1U" id="wRt-Xr-5is"/>
                         <outlet property="valueLabel" destination="UvL-iB-fjM" id="ksK-oX-mVd"/>
@@ -79,10 +125,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="248"/>
+            <point key="canvasLocation" x="424.5" y="201"/>
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="60" height="60"/>
+        <image name="logo" width="200" height="200"/>
     </resources>
+    <color key="tintColor" red="0.74901960784313726" green="0.0" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
 </document>
