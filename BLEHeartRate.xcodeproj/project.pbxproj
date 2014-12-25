@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B4DD1431A4C859300225AAD /* ConnectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4DD1421A4C859300225AAD /* ConnectionController.swift */; };
 		6BF7349F1A4C083E00353D28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF7349E1A4C083E00353D28 /* AppDelegate.swift */; };
 		6BF734A11A4C083E00353D28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF734A01A4C083E00353D28 /* ViewController.swift */; };
 		6BF734A41A4C083E00353D28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF734A21A4C083E00353D28 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B4DD1421A4C859300225AAD /* ConnectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionController.swift; sourceTree = "<group>"; };
 		6BF734991A4C083E00353D28 /* BLEHeartRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEHeartRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF7349D1A4C083E00353D28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BF7349E1A4C083E00353D28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				6BF734C01A4C103000353D28 /* BLEHeartRate.entitlements */,
 				6BF7349E1A4C083E00353D28 /* AppDelegate.swift */,
 				6BF734A01A4C083E00353D28 /* ViewController.swift */,
+				6B4DD1421A4C859300225AAD /* ConnectionController.swift */,
 				6BF734A21A4C083E00353D28 /* Main.storyboard */,
 				6BF734A51A4C083E00353D28 /* Images.xcassets */,
 				6BF734A71A4C083E00353D28 /* LaunchScreen.xib */,
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BF734C41A4C6D1200353D28 /* README.md in Sources */,
+				6B4DD1431A4C859300225AAD /* ConnectionController.swift in Sources */,
 				6BF734A11A4C083E00353D28 /* ViewController.swift in Sources */,
 				6BF7349F1A4C083E00353D28 /* AppDelegate.swift in Sources */,
 			);
@@ -433,6 +437,7 @@
 				6BF734BA1A4C083E00353D28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6BF734BB1A4C083E00353D28 /* Build configuration list for PBXNativeTarget "BLEHeartRateTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +446,7 @@
 				6BF734BD1A4C083E00353D28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
