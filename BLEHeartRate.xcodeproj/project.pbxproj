@@ -13,6 +13,9 @@
 		6BF734A61A4C083E00353D28 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BF734A51A4C083E00353D28 /* Images.xcassets */; };
 		6BF734A91A4C083E00353D28 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF734A71A4C083E00353D28 /* LaunchScreen.xib */; };
 		6BF734B51A4C083E00353D28 /* BLEHeartRateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF734B41A4C083E00353D28 /* BLEHeartRateTests.swift */; };
+		6BF734BF1A4C103000353D28 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF734BE1A4C103000353D28 /* HealthKit.framework */; };
+		6BF734C41A4C6D1200353D28 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6BF734C31A4C6D1200353D28 /* README.md */; };
+		6BF734C61A4C6E5100353D28 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6BF734C51A4C6E5100353D28 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,10 @@
 		6BF734AE1A4C083E00353D28 /* BLEHeartRateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLEHeartRateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF734B31A4C083E00353D28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BF734B41A4C083E00353D28 /* BLEHeartRateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEHeartRateTests.swift; sourceTree = "<group>"; };
+		6BF734BE1A4C103000353D28 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		6BF734C01A4C103000353D28 /* BLEHeartRate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BLEHeartRate.entitlements; sourceTree = "<group>"; };
+		6BF734C31A4C6D1200353D28 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6BF734C51A4C6E5100353D28 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BF734BF1A4C103000353D28 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +67,9 @@
 		6BF734901A4C083E00353D28 = {
 			isa = PBXGroup;
 			children = (
+				6BF734C51A4C6E5100353D28 /* .gitignore */,
+				6BF734C31A4C6D1200353D28 /* README.md */,
+				6BF734BE1A4C103000353D28 /* HealthKit.framework */,
 				6BF7349B1A4C083E00353D28 /* BLEHeartRate */,
 				6BF734B11A4C083E00353D28 /* BLEHeartRateTests */,
 				6BF7349A1A4C083E00353D28 /* Products */,
@@ -77,6 +88,7 @@
 		6BF7349B1A4C083E00353D28 /* BLEHeartRate */ = {
 			isa = PBXGroup;
 			children = (
+				6BF734C01A4C103000353D28 /* BLEHeartRate.entitlements */,
 				6BF7349E1A4C083E00353D28 /* AppDelegate.swift */,
 				6BF734A01A4C083E00353D28 /* ViewController.swift */,
 				6BF734A21A4C083E00353D28 /* Main.storyboard */,
@@ -161,6 +173,12 @@
 				TargetAttributes = {
 					6BF734981A4C083E00353D28 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = Z4U9Y3BTC9;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					6BF734AD1A4C083E00353D28 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -192,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BF734C61A4C6E5100353D28 /* .gitignore in Resources */,
 				6BF734A41A4C083E00353D28 /* Main.storyboard in Resources */,
 				6BF734A91A4C083E00353D28 /* LaunchScreen.xib in Resources */,
 				6BF734A61A4C083E00353D28 /* Images.xcassets in Resources */,
@@ -212,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BF734C41A4C6D1200353D28 /* README.md in Sources */,
 				6BF734A11A4C083E00353D28 /* ViewController.swift in Sources */,
 				6BF7349F1A4C083E00353D28 /* AppDelegate.swift in Sources */,
 			);
@@ -336,9 +356,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BLEHeartRate/BLEHeartRate.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BLEHeartRate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -346,9 +370,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BLEHeartRate/BLEHeartRate.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BLEHeartRate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
