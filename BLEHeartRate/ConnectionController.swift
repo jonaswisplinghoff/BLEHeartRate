@@ -26,7 +26,7 @@ class ConnectionController: NSObject, CBCentralManagerDelegate, CBPeripheralDele
     var healthStore: HKHealthStore?
     
     var currentBpm: Int?
-    var saveContinuously: Bool = false
+    var saveContinuously = false
     
     var delegate: ConnectionControllerDelegate?
     
